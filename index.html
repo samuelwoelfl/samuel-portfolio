@@ -1,12 +1,49 @@
 <!DOCTYPE html>
+
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samuels Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- import jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js" integrity="sha512-Meww2sXqNHxI1+5Dyh/9KAtvI9RZSA4c1K2k5iL02oiPO/RH3Q30L3M1albtqMg50u4gRTYdV4EXOQqXEI336A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
+    <script src="js/form.js"></script>
 </head>
+
 <body>
-    <h1></h1>
+    <h1>Kontakt</h1>
+    <form action="javascript:sendMail();" method="post">
+        <label for="prename">Vorname:</label> <br>
+        <input name="vorname" id="prename" type="text" placeholder="Max"> <br>
+        <span class="error" for="prename"></span>
+
+        <label for="name">Nachname:</label> <br>
+        <input name="nachname" id="name" type="text" placeholder="Mustermann"> <br>
+        <span class="error" for="name"></span>
+
+        <label for="mail">Mail:</label> <br>
+        <input name="email" id="mail" type="text" placeholder="max.mustermann@gmail.com"> <br>
+        <span class="error" for="mail"></span>
+
+        <input type="submit" value="Abschicken">
+    </form>
+
+    <div class="banner" id="cookie_banner">
+        <span>Cookie Banner</span>
+        <button id="cookies_ablehnen">Cookies Ablehnen</button>
+        <button id="cookies_akzeptieren">Cookies Akzeptieren</button>
+    </div>
+
+    <div class="banner" id="welcome_banner">
+        <span>👋🍪 Hallo</span>
+    </div>
+
 </body>
 </html>
